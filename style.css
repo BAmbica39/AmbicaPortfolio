@@ -1,0 +1,326 @@
+    *{
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto Slab', serif;
+                }
+                html{
+                    scroll-behavior: smooth;
+                }
+                .nav_bar{
+                    height: 5rem;
+                    width: 100%;
+                    display: flex;
+                    overflow-x: hidden;
+                    /* position: sticky;
+                    background-color: orangered;
+                    top:0; */
+                }
+                .name{
+                    height: 5rem;
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .name h2{
+                    padding-left: 1.5rem;
+                    font-size: 2rem;
+                    letter-spacing: 0.2rem;
+                }
+                .right_side,.left_side{
+                    height: 5rem;
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+                .list_container{
+                    height: 5rem;
+                    width: 75%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    overflow-x: hidden
+                }
+                .service_list{
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .serve{
+                    font-size: 1.2rem;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                }
+                .serve a{
+                    text-decoration: none;
+                    color: black;
+                }
+                /* MAIN CONTENT HOME */
+                .main_container{
+                    height: 100vh;
+                    width: 100%;
+                    display: flex;
+                    overflow-x: hidden;
+                }
+                .left_container{
+                    height: 80%;
+                    width: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .right_container{
+                    height: 100vh;
+                    width: 50%;
+                    display: flex;
+                }
+                .heading h1{
+                    font-size: 4.5rem;
+                    margin-left: 2rem;
+                }
+                .heading p{
+                    font-size:1.5rem;
+                    margin-left: 2rem;
+                }
+                .btns{
+                    margin: 2rem;
+                    padding: 1rem;
+                    width: 20%;
+                    display: inline;
+                    border-radius: 2rem;
+                    background-color: orangered;
+                    border: 2px solid black;
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+                .btns a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .heading span i{
+
+                    font-size: 2rem;
+                    letter-spacing: 1rem;
+                    color: orangered;
+                }
+                .ambica_image{
+                    height: 100%;
+                    width: 100%;
+                    overflow-y: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .ambica_image img{
+                    height: 100%;
+                    width: 100%;
+                }
+                /* AMOUT ME SECTION */
+                .about{
+                    height:100vh;
+                    width: 100%;
+                    display: flex;
+                    /* background-color: black; */
+                }
+                .image_sec
+                {
+                    height: 100%;
+                    width: 40%;
+                    /* background-color: yellow; */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .img{
+                    height: 80%;
+                    width: 80%;
+                    border-radius:2rem;
+                    background-image: url("photo_2023-10-15_10-48-31.jpg");
+                    background-size: cover;
+                }
+                .intro_sec{
+                    height: 100%;
+                    width: 60%;
+                    display: inline;
+                    margin-left: 2rem;
+                }
+                .intro_sec h2{
+                    font-size: 3rem;
+                }
+                .intro_sec h2 span{
+                    color: orangered;
+                }
+                .intro_sec p{
+                    font-size: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+                .resumelist{
+                    display: flex;
+                    list-style: none;
+                }
+                .listitems {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 2rem;
+                    margin-left: 2rem;
+                }
+                .listitems:hover{
+                    cursor: pointer;
+                }
+                .item1list {
+                    list-style: none;
+                    margin-top: 3rem;
+                    display:block;
+                }
+                .item1list li span{
+                    font-size: 1.5rem;
+                    color: orangered;
+                    
+                }
+                .item2list {
+                    list-style: none;
+                    display: none;
+                }
+                .item2list li span{
+                    
+                    font-size: 1.5rem;
+                    color: orangered;
+                   
+                }
+                /* PROJECTS */
+                .projects{
+                    height:100vh;
+                    width: 100%;
+                }
+                .container_cert{
+                    height:90vh;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .head{
+                    height: 10vh;
+                    width: 100%; 
+                }
+                .head h2{
+                    margin-left: 2rem;
+                    font-size: 3rem;
+                }
+                .head h2 span{
+                    color: orangered;
+                }
+                .sec{
+                    height: 45vh;
+                    width: 50%;
+                    border-radius: 2rem;   
+                    align-items: center;
+                }
+                .cert{
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+                .cert img{
+                    height:70%;
+                    width:70%;
+                    box-shadow: 0.5rem 0.5rem 1rem orangered;
+                }
+                .cert img:hover{
+                    box-shadow: 1rem 1rem 2rem orangered;
+                    transition: 0.3s;
+                }
+                /* CONATACT FORM */
+                .contact{
+                    height:100vh;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .section_title{
+                    height: 15vh;
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+                }
+                .section_title h2{
+                font-size: 3rem;
+                }
+                .section_title h2 span{
+                color: orangered;
+                }
+                .content{
+                    height: 85vh;
+                    width: 80%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .contact_left{
+                    height: 100%;
+                    width:100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                form{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #name{
+                    height: 10%;
+                    width: 80%;
+                    border-radius: 0.2rem;
+                    padding: 0.5rem;
+                    margin: 1rem;
+                    border:2px solid orangered;
+                }
+                #email{
+                    height: 10%;
+                    width: 80%;
+                    border-radius: 0.2rem;
+                    padding: 0.5rem;
+                    margin: 1rem;
+                    border: 2px solid orangered;
+                }
+                #message{
+                    height: 10%;
+                    width: 80%;
+                    border-radius: 0.2rem;
+                    padding: 0.5rem;
+                    margin: 1rem;
+                    resize: none;
+                    border: 2px solid orangered;
+                }
+                .btn{
+                    height: 10%;
+                    width: 80%;
+                    border-radius: 0.2rem;
+                    padding: 0.5rem;
+                    margin: 1rem;
+                    background-color: black;
+                    color: orangered;
+                    border: 2px solid black;
+                }
+                
+                /* footer */
+                .footer{
+                    height:3rem;
+                    width: 100%;
+                    color: wheat;
+                    background-color: black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
