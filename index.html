@@ -2,114 +2,346 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ambica Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bejagama Ambica — Software & ERP Developer</title>
+  <meta name="description" content="Bejagama Ambica — Computer Science graduate working on Microsoft Dynamics 365 Business Central, full-stack development and data analytics." />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-
-  <!-- Font Awesome -->
+  <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" />
 
-  <!-- Custom CSS -->
+  <!-- Custom CSS (loads its own fonts) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- ================= Navbar ================= -->
   <nav class="nav_bar">
-    <div class="left_side">
-      <h2><span style="color: orangered;">A</span>mbica</h2>
-    </div>
-    <div class="right_side">
-      <ul class="service_list">
-        <li><a href="#home" style="color: orangered;">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <a href="#home" class="brand">Ambica<span>.</span></a>
+    <ul class="service_list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section class="main_container" id="home">
-    <div class="heading">
-      <h1>Hello, I'm <span style="color:orangered;">Ambica</span></h1>
-      <p>B.Tech student at KL University passionate about full-stack development and data analytics. I enjoy building end-to-end web applications and uncovering insights through data. With a strong foundation in both front-end and back-end technologies, I continuously seek to learn new tools and frameworks to deliver efficient, real-world solutions.</p>
-      <a class="btns" href="https://drive.google.com/file/d/1jePWzOPxK-6cP6dpcApEQ9kI3NLoF4fK/view?usp=sharing" target="_blank">Download CV</a>
+  <!-- ================= Hero ================= -->
+  <header class="hero" id="home">
+    <div class="hero_inner">
+      <p class="eyebrow"><span class="dot"></span> Business Central Consultant Trainee · E Pocket Solutions</p>
+      <h1>Hi, I'm <em>Ambica</em>.<br />I build ERP reports, full-stack apps &amp; data dashboards.</h1>
+      <p class="lead">
+        Computer Science graduate from KL University working on Microsoft Dynamics 365 Business Central and AL development,
+        with hands-on experience in React, FastAPI, Spring Boot, machine learning and Power BI.
+      </p>
+      <div class="hero_actions">
+        <a class="btn btn_primary" href="https://drive.google.com/file/d/1lv0OKa877XMixKeMlOb78eWklbg4uSdr/view?usp=drive_link" target="_blank" rel="noopener">View Resume</a>
+        <a class="btn btn_ghost" href="#projects">See Projects</a>
+      </div>
       <div class="social_icons">
-        <a href="https://github.com/BAmbica39" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/bejagama-ambica-21b19b26b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/BAmbica39" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/bejagama-ambica-21b19b26b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:ambicabejagama@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
       </div>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <h2>About <span>Me</span></h2>
-    <p>
-      I’m currently pursuing a B.Tech at KL University with a CGPA of 9.74. I love building applications that solve real-world problems. My interests lie in frontend development, data analytics, and project collaboration.
-    </p>
-    <h3>Skills</h3>
-    <ul>
-      <li><strong>Languages:</strong> C, Java, Python</li>
-      <li><strong>Web:</strong> HTML/CSS, JavaScript, React.js</li>
-      <li><strong>Database:</strong> MySQL</li>
-      <li><strong>Tools:</strong> Power BI, Jira, Agile, MS Access</li>
-    </ul>
-    <h3>Certifications</h3>
-    <ul>
-      <li>Red Hat Certified Enterprise Application Developer (EX183)</li>
-      <li>Automation Anywhere Advanced Automation Certified</li>
-    </ul>
-  </section>
+    <dl class="hero_stats">
+      <div><dt>9.74</dt><dd>B.Tech CGPA</dd></div>
+      <div><dt>4</dt><dd>Certifications</dd></div>
+      <div><dt>2</dt><dd>Industry roles</dd></div>
+    </dl>
+  </header>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <h2><span>Pro</span>jects</h2>
-    <ul>
-      <li>
-        <strong>Big Mart Sales Prediction:</strong><br>
-        Built a predictive analytics pipeline using Python, scikit-learn, and XGBoost to forecast retail product sales across multiple outlets. Included feature engineering and ensemble modeling for high accuracy.
-      </li>
-      <li>
-        <strong>Sales Insights – Brick-and-Mortar Business:</strong><br>
-        Developed a Power BI dashboard using SQL data to help hardware businesses visualize and improve sales strategies.
-      </li>
-      <li>
-        <strong>Customer Churn Prediction with Artificial Neural Networks (American Express):</strong><br>
-        Built an ANN-based churn prediction model using Python and TensorFlow on American Express customer data. Preprocessed features, encoded categories, and achieved 85% accuracy using confusion matrix.
-      </li>
-      <li>
-        <strong>Portal-360 Landing Page:</strong><br>
-        Designed a responsive web landing page during internship at Piersoft using HTML, CSS, and React.
-      </li>
-      <li>
-        <strong>Converse ERP Portal:</strong><br>
-        Contributed to ERP web portal modules in React and collaborated on backend integration during internship.
-      </li>
-      <li>
-        <strong>Accounting Software:</strong><br>
-        Built a Microsoft Access-based accounting system for a rice mill to manage ledgers and reduce manual errors.
-      </li>
-    </ul>
-  </section>
+  <main>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2><span>Con</span>tact</h2>
-    <form action="https://formspree.io/f/manjpwlz" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button class="btn" type="submit">Send Message</button>
-    </form>
-  </section>
+    <!-- ================= About ================= -->
+    <section class="section" id="about">
+      <h2 class="section_title">About</h2>
+      <div class="about_grid">
+        <div class="about_text">
+          <p>
+            I'm a Computer Science graduate from Koneru Lakshmaiah Educational University, Hyderabad, currently training as a
+            <strong>Business Central Consultant</strong> — customizing Dynamics 365 reports in AL and designing RDLC layouts
+            for real business workflows.
+          </p>
+          <p>
+            Alongside ERP work, I build full-stack applications with React, FastAPI and Spring Boot, and I enjoy turning data
+            into decisions with Power BI and machine learning. I'm looking for roles in software engineering, ERP development
+            and data analytics.
+          </p>
+        </div>
 
-  <!-- Footer -->
+        <div class="about_side">
+          <h3 class="label">Education</h3>
+          <ul class="edu_list">
+            <li>
+              <div>
+                <strong>Koneru Lakshmaiah Educational University</strong>
+                <span>B.Tech, Computer Science · CGPA 9.74</span>
+              </div>
+              <time>2022 – 2026</time>
+            </li>
+            <li>
+              <div>
+                <strong>Narayana Junior College</strong>
+                <span>Class XII (TSBIE) · 95.2%</span>
+              </div>
+              <time>2020 – 2022</time>
+            </li>
+            <li>
+              <div>
+                <strong>Pallavi Model School</strong>
+                <span>Class X (CBSE) · CGPA 10.0</span>
+              </div>
+              <time>2019 – 2020</time>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Experience ================= -->
+    <section class="section" id="experience">
+      <h2 class="section_title">Experience</h2>
+
+      <ol class="timeline">
+        <li class="role">
+          <div class="role_meta">
+            <time>Aug 2026 — Present</time>
+            <span class="badge">Current</span>
+          </div>
+          <div class="role_body">
+            <h3>Business Central Consultant Trainee</h3>
+            <p class="company">E Pocket Solutions Pvt. Ltd.</p>
+            <ul>
+              <li>Develop and customize Dynamics 365 Business Central reports in AL — Customer List, Payment Terms, Vouchers, Debit/Credit Notes and Sales Orders.</li>
+              <li>Design RDLC layouts covering fields, column formatting, headers, footers, page breaks and PDF output.</li>
+              <li>Extend BC tables, pages, enums and report datasets to support new fields and reporting requirements.</li>
+              <li>Troubleshoot AL code, layouts and publishing issues; working knowledge of sales &amp; purchase cycles and GL, customer, vendor and bank ledgers.</li>
+            </ul>
+            <ul class="tags">
+              <li>Dynamics 365 BC</li><li>AL</li><li>RDLC</li><li>ERP</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="role">
+          <div class="role_meta">
+            <time>May 2024 — Jul 2024</time>
+          </div>
+          <div class="role_body">
+            <h3>React Frontend Developer Intern</h3>
+            <p class="company">Piersoft Technologies Pvt. Ltd.</p>
+            <ul>
+              <li>Built responsive UI components for the Converse Portal using React.js, HTML, CSS and JavaScript.</li>
+              <li>Developed reusable components and state-management flows to improve frontend maintainability.</li>
+              <li>Integrated REST APIs to show dynamic data across marketplace and ERP features.</li>
+              <li>Implemented responsive layouts for the Portal-360 landing page and product-feature sections.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li><li>JavaScript</li><li>REST APIs</li><li>Responsive UI</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= Projects ================= -->
+    <section class="section" id="projects">
+      <h2 class="section_title">Selected Projects</h2>
+
+      <div class="project_grid">
+        <article class="project">
+          <header>
+            <span class="project_type">Full-stack · AI</span>
+            <a class="project_link" href="https://github.com/BAmbica39/AgriSense-Chatbot" target="_blank" rel="noopener" aria-label="AgriSense on GitHub"><i class="fab fa-github"></i></a>
+          </header>
+          <h3>AgriSense — AI Farming Chatbot</h3>
+          <p>A full-stack agricultural assistant that answers farming questions with the Gemini API, with secure accounts, conversation context and rate limiting.</p>
+          <ul class="points">
+            <li>JWT auth, password hashing and MySQL-backed user management</li>
+            <li>Input validation, API error handling and automated API tests</li>
+          </ul>
+          <ul class="tags">
+            <li>React</li><li>FastAPI</li><li>Python</li><li>MySQL</li><li>Gemini API</li><li>JWT</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <header>
+            <span class="project_type">Backend</span>
+            <a class="project_link" href="https://github.com/BAmbica39/EduNexus" target="_blank" rel="noopener" aria-label="EduNexus on GitHub"><i class="fab fa-github"></i></a>
+          </header>
+          <h3>EduNexus — Student Management System</h3>
+          <p>A REST API backend for student records, courses, enrollments, grades and attendance, structured in clean controller / service / repository / DTO layers.</p>
+          <ul class="points">
+            <li>Persistence with Spring Data JPA and MySQL</li>
+            <li>Secured with Spring Security and JWT</li>
+          </ul>
+          <ul class="tags">
+            <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>MySQL</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <header>
+            <span class="project_type">Business Intelligence</span>
+            <a class="project_link" href="https://github.com/BAmbica39/SalesAnalysisDashboard" target="_blank" rel="noopener" aria-label="Sales Analysis Dashboard on GitHub"><i class="fab fa-github"></i></a>
+          </header>
+          <h3>Sales Analysis Dashboard</h3>
+          <p>An interactive Power BI dashboard on the SuperStore dataset tracking sales, profit, quantity and delivery times for business performance monitoring.</p>
+          <ul class="points">
+            <li>Comparisons across categories, regions, segments, shipping and payment modes</li>
+            <li>Sales and profit trends over time</li>
+          </ul>
+          <ul class="tags">
+            <li>Power BI</li><li>Data Visualization</li><li>Sales Analytics</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <header>
+            <span class="project_type">Machine Learning</span>
+            <a class="project_link" href="https://github.com/BAmbica39/CustomerChurnAmericanExpress" target="_blank" rel="noopener" aria-label="Customer Churn Prediction on GitHub"><i class="fab fa-github"></i></a>
+          </header>
+          <h3>Customer Churn Prediction — American Express</h3>
+          <p>An artificial neural network that predicts customer churn, with preprocessing and feature engineering on customer data.</p>
+          <ul class="points">
+            <li>Model built and trained in TensorFlow</li>
+            <li>Evaluated with a confusion matrix and classification metrics</li>
+          </ul>
+          <ul class="tags">
+            <li>Python</li><li>TensorFlow</li><li>scikit-learn</li><li>Pandas</li><li>NumPy</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="more_work">
+        <h3 class="label">More on GitHub</h3>
+        <ul>
+          <li><a href="https://github.com/BAmbica39/Allreports" target="_blank" rel="noopener"><span>Business Central Reports</span><em>AL</em></a></li>
+          <li><a href="https://github.com/BAmbica39/Federated-Clustering-and-Pattern-Recognition-for-Multi-Modal-Traffic-Data-in-Smart-Cities" target="_blank" rel="noopener"><span>Federated Clustering for Smart-City Traffic Data</span><em>Python</em></a></li>
+          <li><a href="https://github.com/BAmbica39/ResumeATSChecker" target="_blank" rel="noopener"><span>Resume ATS Checker</span><em>JavaScript</em></a></li>
+          <li><a href="https://github.com/BAmbica39/BigMartSales" target="_blank" rel="noopener"><span>Big Mart Sales Prediction</span><em>Python</em></a></li>
+        </ul>
+        <a class="text_link" href="https://github.com/BAmbica39?tab=repositories" target="_blank" rel="noopener">All repositories →</a>
+      </div>
+    </section>
+
+    <!-- ================= Skills & Certifications ================= -->
+    <section class="section" id="skills">
+      <h2 class="section_title">Skills &amp; Certifications</h2>
+
+      <div class="skills_grid">
+        <div class="skill_group">
+          <h3>ERP Development</h3>
+          <p>Dynamics 365 Business Central (AL), RDLC Reporting, ERP Business Processes</p>
+        </div>
+        <div class="skill_group">
+          <h3>Languages</h3>
+          <p>Python, Java, C, JavaScript, AL</p>
+        </div>
+        <div class="skill_group">
+          <h3>Web &amp; Backend</h3>
+          <p>React.js, FastAPI, Spring Boot, REST APIs, HTML5, CSS3</p>
+        </div>
+        <div class="skill_group">
+          <h3>Databases</h3>
+          <p>SQL, MySQL</p>
+        </div>
+        <div class="skill_group">
+          <h3>Data Analytics &amp; BI</h3>
+          <p>Power BI, Tableau, Data Cleaning &amp; Transformation, EDA</p>
+        </div>
+        <div class="skill_group">
+          <h3>Machine Learning</h3>
+          <p>TensorFlow, scikit-learn, Pandas, NumPy, Feature Engineering</p>
+        </div>
+        <div class="skill_group">
+          <h3>Tools</h3>
+          <p>Git, GitHub, VS Code, Postman, Jupyter Notebook</p>
+        </div>
+      </div>
+
+      <h3 class="label cert_label">Certifications</h3>
+      <ul class="cert_list">
+        <li><i class="fa-brands fa-redhat"></i><span>Red Hat Certified Enterprise Application Developer</span></li>
+        <li><i class="fa-solid fa-robot"></i><span>Automation Anywhere Certified Advanced Automation Professional</span></li>
+        <li><i class="fa-solid fa-code"></i><span>ServiceNow Certified Application Developer (CAD)</span></li>
+        <li><i class="fa-solid fa-server"></i><span>ServiceNow Certified System Administrator (CSA)</span></li>
+      </ul>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="section" id="contact">
+      <h2 class="section_title">Contact</h2>
+
+      <div class="contact_grid">
+        <div class="contact_intro">
+          <p class="contact_big">Open to software engineering, ERP development and data analytics roles.</p>
+          <p>Have an opportunity or just want to say hello? Send a message or reach me directly.</p>
+          <ul class="contact_links">
+            <li><i class="fa-regular fa-envelope"></i><a href="mailto:ambicabejagama@gmail.com">ambicabejagama@gmail.com</a></li>
+            <li><i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/bejagama-ambica-21b19b26b/" target="_blank" rel="noopener">linkedin.com/in/bejagama-ambica</a></li>
+            <li><i class="fa-solid fa-location-dot"></i><span>Hyderabad, India</span></li>
+          </ul>
+        </div>
+
+        <form class="contact_form" action="https://formspree.io/f/manjpwlz" method="POST">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@company.com" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Tell me a little about the role or project" required></textarea>
+          </label>
+          <button class="btn btn_primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
   <footer class="footer">
-    <p>&copy; 2025 Ambica | Built with ❤️ by Ambica</p>
+    <p>© <span id="year">2026</span> Bejagama Ambica</p>
+    <a href="#home">Back to top ↑</a>
   </footer>
+
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Gentle fade-in of sections as they scroll into view
+    const io = 'IntersectionObserver' in window
+      ? new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) { e.target.classList.add('is_visible'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 })
+      : null;
+    document.querySelectorAll('.section').forEach((el) => {
+      if (io) { el.classList.add('reveal'); io.observe(el); }
+    });
+
+    // Highlight the nav link for the section on screen
+    const links = document.querySelectorAll('.service_list a');
+    const navIo = 'IntersectionObserver' in window
+      ? new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' })
+      : null;
+    document.querySelectorAll('main section[id]').forEach((s) => navIo && navIo.observe(s));
+  </script>
 </body>
 </html>
-
-
