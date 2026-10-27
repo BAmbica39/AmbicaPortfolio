@@ -27,8 +27,9 @@
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
+/* Dark theme: follows the device setting until the visitor picks one with the toggle */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #111113;
     --surface: #18181b;
     --ink: #ededee;
@@ -37,7 +38,31 @@
     --line: #2a2a2f;
     --accent: #ff7a45;
     --accent-soft: rgba(255, 122, 69, 0.1);
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #111113;
+  --surface: #18181b;
+  --ink: #ededee;
+  --ink-soft: #b4b4bb;
+  --ink-mute: #7a7a83;
+  --line: #2a2a2f;
+  --accent: #ff7a45;
+  --accent-soft: rgba(255, 122, 69, 0.1);
+  color-scheme: dark;
+}
+
+/* smooth colour change when toggling */
+body,
+.nav_bar,
+.project,
+.cert_list li,
+.contact_form,
+.social_icons a,
+.eyebrow {
+  transition: background-color 0.35s var(--ease), color 0.35s var(--ease), border-color 0.35s var(--ease);
 }
 
 /* ---------- Reset & base ---------- */
@@ -220,6 +245,58 @@ a {
 .service_list a.active::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* ---------- Theme toggle ---------- */
+.nav_right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.theme_toggle {
+  position: relative;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.theme_toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(15deg);
+}
+
+.theme_toggle i {
+  position: absolute;
+  font-size: 0.95rem;
+  transition: transform 0.45s var(--ease), opacity 0.3s var(--ease);
+}
+
+/* light mode shows the moon (switch to dark); dark mode shows the sun */
+.theme_toggle .fa-sun {
+  opacity: 0;
+  transform: translateY(120%) rotate(-90deg);
+}
+
+:root[data-theme="dark"] .theme_toggle .fa-sun {
+  opacity: 1;
+  transform: none;
+}
+
+:root[data-theme="dark"] .theme_toggle .fa-moon {
+  opacity: 0;
+  transform: translateY(-120%) rotate(90deg);
 }
 
 /* ---------- Hero ---------- */
@@ -941,7 +1018,17 @@ a {
   }
 
   /* nav links scroll sideways instead of wrapping */
+  .nav_right {
+    gap: 0.9rem;
+  }
+
+  .theme_toggle {
+    width: 34px;
+    height: 34px;
+  }
+
   .service_list {
+    min-width: 0;
     gap: 1.2rem;
     overflow-x: auto;
     scrollbar-width: none;
