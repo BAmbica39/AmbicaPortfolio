@@ -9,6 +9,18 @@
   <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" />
 
+  <!-- Apply the saved theme before the page paints (prevents a flash of the wrong theme) -->
+  <script>
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Custom CSS (loads its own fonts) -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,13 +29,19 @@
   <!-- ================= Navbar ================= -->
   <nav class="nav_bar">
     <a href="#home" class="brand">Ambica<span>.</span></a>
-    <ul class="service_list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav_right">
+      <ul class="service_list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme_toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+      </button>
+    </div>
   </nav>
 
   <!-- ================= Hero ================= -->
@@ -317,6 +335,21 @@
   <script>
     // Current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Light / dark theme toggle (choice is remembered on this device)
+    const root = document.documentElement;
+    const toggle = document.querySelector('.theme_toggle');
+    const syncLabel = () => {
+      const dark = root.getAttribute('data-theme') === 'dark';
+      toggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    };
+    syncLabel();
+    toggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      syncLabel();
+    });
 
     // Gentle fade-in of sections as they scroll into view
     const io = 'IntersectionObserver' in window
